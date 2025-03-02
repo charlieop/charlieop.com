@@ -1,0 +1,142 @@
+<section id="skills" class="skills section">
+  <div class="section-header fade-in">
+    <h2>Skills</h2>
+    <p>
+      Live as if you were to die tomorrow. Learn as if you were to live forever.
+    </p>
+  </div>
+  <div class="content">
+    <div class="skill-section">
+      <h3 class="fade-in">Things that I'm <strong>best</strong> at</h3>
+      <ul>
+        <li>HTML + CSS + JS</li>
+        <li>Vue 3 + Nuxt</li>
+        <li>Django</li>
+        <li>Python</li>
+      </ul>
+    </div>
+    <div class="skill-section">
+      <h3 class="fade-in">
+        Things that I'm <strong>capable</strong> of
+      </h3>
+      <ul>
+        <li>Git</li>
+        <li>C ++</li>
+        <li>SQL</li>
+        <li>TypeScript</li>
+        <li>UI Design</li>
+        <li>Machine Learning</li>
+        <li>Web Crawling</li>
+      </ul>
+    </div>
+    <div class="skill-section">
+      <h3 class="fade-in">Things that I have <strong>used</strong></h3>
+      <ul>
+        <li>Java</li>
+        <li>Swift</li>
+        <li>C# ASP.NET</li>
+        <li>Unity 3D</li>
+        <li>Matlab</li>
+        <li>Davinci Resolve</li>
+        <li>Figma</li>
+      </ul>
+    </div>
+    <div class="skill-section">
+      <h3 class="fade-in">
+        Things that I'm <strong>self-studying</strong> now
+      </h3>
+      <ul>
+        <li>Astro</li>
+        <li>React</li>
+        <li>ARKit</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .skill-section {
+    display: grid;
+    grid-template-columns: 4fr 7fr;
+    gap: 2rem;
+    align-items: start;
+
+    --_skills-gradient: linear-gradient(
+      to bottom,
+      #26bda6,
+      #26bda6,
+      #47c089,
+      #6ec067,
+      #97bd43,
+      #c1b61f,
+      #d2b522,
+      #e2b328,
+      #f2b131,
+      #ecbb45,
+      #e6c458,
+      #e1cc6b,
+      #ded37e,
+      #ded37e
+    );
+  }
+
+  h3::after {
+    content: "👉";
+  }
+
+  h3 {
+    position: sticky;
+    top: max(8rem, 20%);
+    text-align: left;
+    padding: 1rem;
+    font-weight: 700;
+    font-size: var(--fs-400);
+  }
+
+  strong {
+    color: var(--clr-primary);
+  }
+
+  ul {
+    background-image: var(--_skills-gradient);
+    background-size: fit;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-attachment: fixed;
+    padding: 3rem 0 3rem 0;
+  }
+
+  li {
+    padding-top: clamp(3rem, 8svh, 6rem);
+    font-weight: 700;
+    font-size: var(--fs-500);
+    text-align: right;
+    padding-right: 1rem;
+  }
+
+  /* selects only for firefox */
+  @-moz-document url-prefix() {
+    ul {
+      background-attachment: scroll;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .skill-section {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    h3 {
+      font-size: var(--fs-600);
+      text-align: right;
+    }
+    li {
+      text-align: center;
+      font-size: var(--fs-700);
+    }
+  }
+</style>

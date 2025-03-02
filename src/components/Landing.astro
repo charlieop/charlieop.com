@@ -1,0 +1,58 @@
+<section id="home" class="home section">
+  <div class="">
+    <h1 class="fade-in">
+      Hi, I'm
+      <span class="name forename">Shu&nbsp;Pui</span>,
+      <span class="name surname">Chan</span>
+    </h1>
+    <p class="fade-in">You can also call me Charlie</p>
+  </div>
+</section>
+
+<style>
+  h1 {
+    font-size: var(--fs-700);
+    margin-bottom: 3rem;
+  }
+  .name {
+    font-size: var(--fs-900);
+  }
+  p {
+    font-size: var(--fs-600);
+  }
+
+  .home {
+    aspect-ratio: 2 / 3;
+    width: 100%;
+    max-height: 100svh;
+    position: relative;
+    overflow: hidden;
+
+    display: grid;
+    place-items: center;
+  }
+  .home::before,
+  .home::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: var(--clr-primary--muted);
+    inset: -100% -100% 50% 55%;
+    z-index: -1;
+  }
+
+  .home::after {
+    inset: 80% 25% 5% -100%;
+  }
+
+  @media screen and (min-width: 800px) {
+    .home {
+      aspect-ratio: 1;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .home {
+      aspect-ratio: 3 / 2;
+    }
+  }
+</style>

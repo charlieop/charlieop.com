@@ -1,0 +1,249 @@
+<section id="projects" class="projects section">
+  <div class="section-header fade-in">
+    <h2>Projects</h2>
+    <p>View all the projects I have completed.</p>
+  </div>
+  <div class="project-items-grid">
+    <div class="project-col">
+      <div class="project-item fade-in">
+        <div class="project-img">
+          <img
+            src="imgs/projects/valentine-for-a-week-2025.webp"
+            alt=""
+            loading="lazy"
+            width="2641"
+            height="2696"
+          />
+        </div>
+        <div class="project-text">
+          <h3 class="project-title">
+            <a href="/blogs/valentine-for-a-week-2025" class="link"
+              >Valentine For A Week 2025</a
+            >
+          </h3>
+          <p class="project-description">
+            An annual blind date event for students at HKUST, HKU & CUHK. I
+            designed & developed the whole system for user and manager. You may
+            find more details of this project in this <a
+              href="/blogs/valentine-for-a-week-2025">blog</a
+            >.
+          </p>
+        </div>
+      </div>
+      <div class="project-item fade-in">
+        <div class="project-img">
+          <img
+            src="imgs/projects/tripleuni.webp"
+            alt=""
+            loading="lazy"
+            width="1920"
+            height="1302"
+          />
+        </div>
+        <div class="project-text">
+          <h3 class="project-title">
+            <a href="https://tripleuni.com/landing/" class="link"
+              >Triple Uni Homepage</a
+            >
+          </h3>
+          <p class="project-description">
+            Redesigned the landing page of Triple Uni with Vue3 to make it more
+            appealing and addes a introduction for our platform.
+          </p>
+        </div>
+      </div>
+      <div class="project-item fade-in">
+        <div class="project-img">
+          <img
+            src="imgs/projects/yearReport.webp"
+            alt=""
+            loading="lazy"
+            height="1280"
+            width="1262"
+          />
+        </div>
+        <div class="project-text">
+          <h3 class="project-title">Triple Uni Year Report 2023</h3>
+          <p class="project-description">
+            A year report page build with Vue3 for frontend and php for backend.
+            Users can view their activities for the year 2023 on their phone.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="project-col push">
+      <div class="project-item fade-in">
+        <div class="project-img">
+          <img
+            src="imgs/projects/tripleuni-year-review-2024.webp"
+            alt=""
+            loading="lazy"
+            width="2641"
+            height="2696"
+          />
+        </div>
+        <div class="project-text">
+          <h3 class="project-title">
+            <a href="/blogs/year-report-2024" class="link"
+              >Triple Uni Year Report 2024</a
+            >
+          </h3>
+          <p class="project-description">
+            An annual summary report for Triple Uni's users in 2024. This year
+            we improved the graphics and added AI summaries to our report. You
+            may find more details of this project in this <a
+              href="/blogs/year-report-2024">blog</a
+            >.
+          </p>
+        </div>
+      </div>
+      <div class="project-item fade-in">
+        <div class="project-img">
+          <img
+            src="imgs/projects/saga.webp"
+            alt=""
+            loading="lazy"
+            width="1280"
+            height="832"
+          />
+        </div>
+        <div class="project-text">
+          <h3 class="project-title">
+            <a
+              href="http://github.saga-xingguang.com"
+              class="link"
+              target="_blank">SAGA Homepage</a
+            >
+          </h3>
+          <p class="project-description">
+            The official website of SAGA, build with Vue3 and deployed on a
+            Nginx server. The website is used to introduce the organization and
+            recruit volunteers.
+          </p>
+        </div>
+      </div>
+      <div class="project-item fade-in">
+        <div class="project-img">
+          <img
+            src="imgs/projects/tomAndJerry.webp"
+            alt=""
+            loading="lazy"
+            width="1798"
+            height="1256"
+          />
+        </div>
+        <div class="project-text">
+          <h3 class="project-title">
+            <a
+              href="https://github.com/charlieop/Comp3111F23G05"
+              class="link"
+              target="_blank">Tom and Jerry Maze Game</a
+            >
+          </h3>
+          <p class="project-description">
+            A simple maze game build with JavaFX. The game features a map
+            editor, a game arena and has different BGMs and SFXs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects {
+    --_grid-gap: 3rem;
+  }
+
+  .project-items-grid {
+    margin-top: 2rem;
+    display: flex;
+    gap: var(--_grid-gap);
+    justify-content: center;
+  }
+
+  .project-col {
+    display: flex;
+    flex: 1 1 50%;
+    flex-direction: column;
+    gap: var(--_grid-gap);
+  }
+
+  .project-col.push {
+    margin-top: 12rem;
+  }
+
+  .project-item {
+    --_transition: all 0.2s ease-in-out;
+    box-shadow:
+      0 3px 0 var(--clr-primary),
+      0 3px 1rem #03030322;
+    transition: var(--_transition);
+    overflow: hidden;
+  }
+
+  .project-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    transition: var(--_transition);
+    opacity: 0.8;
+  }
+
+  .project-text {
+    background: var(--clr-primary--light);
+    padding: 2.5rem 2rem;
+    transition: var(--_transition);
+  }
+
+  h3 {
+    font-size: var(--fs-500);
+    font-weight: 700;
+    color: var(--clr-primary);
+    transition: var(--_transition);
+  }
+
+  .project-text p::before {
+    content: "";
+    display: inline-block;
+    width: 2ch;
+  }
+  .project-text p {
+    font-weight: var(--light-font-weight);
+    font-size: var(--fs-200);
+    font-weight: 300;
+    margin-top: 1rem;
+    line-height: 1.5;
+    word-spacing: 0.1ch;
+  }
+
+  .project-item:hover {
+    transform: scale(1.03);
+    box-shadow:
+      0 8px 0 var(--clr-primary),
+      0 8px 1rem #03030357;
+  }
+  .project-item:hover img {
+    scale: 1.05;
+    opacity: 1;
+  }
+  .project-item:hover h3 {
+    transform: translateX(0.5rem);
+    filter: brightness(1.02);
+  }
+
+  @media screen and (max-width: 800px) {
+    .project-items-grid {
+      padding-inline: 2rem;
+      flex-direction: column;
+    }
+    .project-text {
+      padding: 2rem 2.5rem;
+    }
+
+    .project-col.push {
+      margin-top: 0;
+    }
+  }
+</style>

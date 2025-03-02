@@ -1,0 +1,52 @@
+<section id="links" class="links section">
+  <div class="content-wrapper">
+    <div class="section-header fade-in">
+      <h2>Links</h2>
+      <p>You may find more about me here.</p>
+    </div>
+    <div class="link-container">
+      <div class="link-item fade-in">
+        <h6 class="link-title">My Github</h6>
+        <div class="link-link">
+          <a class="link" href="https://github.com/charlieop" target="_blank"
+            >Visit</a
+          >
+        </div>
+      </div>
+      <!-- <div class="link-item fade-in">
+        <h6 class="link-title">My Resume</h6>
+        <div class="link-link">
+          <a
+            class="link"
+            href="/personal_page/files/CHAN_Shu_Pui_CV.pdf"
+            download="Resume_CHAN_ShuPui.pdf">Download</a
+          >
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<style>
+  .link-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    place-items: center;
+    gap: 3rem;
+    margin-bottom: 10rem;
+  }
+
+  .link-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .link-link {
+    font-size: 1.25rem;
+    margin: 0.5rem 2rem;
+  }
+  .link-link::before {
+    content: "👉";
+    margin-right: 0.5rem;
+  }
+</style>

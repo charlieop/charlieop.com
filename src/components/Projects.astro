@@ -268,8 +268,8 @@
     } else {
       projectItemsGrid.appendChild(col1);
       projectItemsGrid.appendChild(col2);
-      projectItems.forEach((item) => {
-        if (col1.offsetHeight <= col2.offsetHeight) {
+      projectItems.forEach((item, index) => {
+        if (index % 2 === 0) {
           col1.appendChild(item);
         } else {
           col2.appendChild(item);

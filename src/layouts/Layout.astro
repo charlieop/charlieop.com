@@ -12,12 +12,22 @@ const { title = "Charlie Chan" } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{ title }</title>
+    <title>{title}</title>
   </head>
   <body>
     <slot />
   </body>
+  <noscript>
+    <style>
+      .fade-in {
+        opacity: 1 !important;
+      }
+      .timeline-animation > * {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
 </html>
 
-<style>
-</style>
+<style></style>

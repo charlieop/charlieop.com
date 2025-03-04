@@ -1,0 +1,128 @@
+---
+import BlogHeader from "../components/BlogHeader.astro";
+import Layout from "./Layout.astro";
+import Footer from "../components/Footer.astro";
+
+const { title = "Charlie's Blog" } = Astro.props;
+---
+
+<Layout title={title}>
+  <BlogHeader />
+  <main>
+    <div class="blog">
+      <slot />
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    margin-inline: auto;
+    max-width: 1600px;
+    min-height: 60svh;
+    padding: 3rem var(--padding-inline);
+  }
+
+  .blog {
+    --_index-width: 2rem;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 700;
+      margin-block: 0.75em 0.5em;
+    }
+    h1 {
+      font-size: var(--fs-800);
+      margin-top: 0;
+    }
+    h2 {
+      font-size: var(--fs-700);
+    }
+    h3 {
+      font-size: var(--fs-600);
+    }
+    h4 {
+      font-size: var(--fs-500);
+    }
+    h5 {
+      font-size: var(--fs-400);
+    }
+    p {
+      margin-block: 0.25em;
+      font-size: var(--fs-300);
+    }
+    :not(p) + p {
+      margin-top: 0.75em;
+    }
+    p:not(:last-child):not(:has(+ p)) {
+      margin-bottom: 0.5em;
+    }
+    img {
+      margin-block: 0.5rem;
+      width: auto;
+      max-width: 100%;
+      max-height: 500px;
+    }
+
+    blockquote {
+      border-left: 4px solid var(--clr-background--muted);
+      margin: 0.5em 0;
+      padding: 0.5em var(--_index-width);
+    }
+    strong {
+      font-weight: 700;
+    }
+    em {
+      font-style: italic;
+    }
+    hr {
+      height: 1px;
+      width: 95%;
+      background-color: var(--clr-text--muted);
+      border: none;
+      margin: 1.25rem auto;
+    }
+    ul li {
+      list-style-type: disc;
+    }
+    ul li li {
+      list-style-type: circle;
+    }
+    ul li li li {
+      list-style-type: square;
+    }
+    ol li {
+      list-style-type: decimal;
+    }
+    ol li li {
+      list-style-type: lower-roman;
+    }
+    ol li li li {
+      list-style-type: lower-alpha;
+    }
+    li {
+      margin-left: var(--_index-width);
+      list-style-position: inside;
+      margin-block: 0.5em;
+    }
+    pre {
+      border-radius: 0.5rem;
+      padding: 1rem;
+      overflow-x: auto;
+      font-family: monospace;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .blog {
+      --_index-width: 1rem;
+    }
+    
+  }
+</style>
+
+<script></script>

@@ -437,6 +437,9 @@
   }
 
   @media screen and (max-width: 800px) {
+    .content {
+      --_timeline-padding-inline: 0.5rem;
+    }
     .content::before {
       left: calc(var(--_timeline-padding-inline) + var(--_img-size) / 2);
     }

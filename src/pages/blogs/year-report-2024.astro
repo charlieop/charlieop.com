@@ -43,6 +43,9 @@ import { Content } from "../../blogs/year-report-2024.md";
     font-size: var(--fs-700);
     margin: 0;
   }
+  .blog-wrapper {
+    padding-bottom: 20rem;
+  }
   iframe {
     overscroll-behavior: none;
     border: 3px solid var(--clr-text);
@@ -50,6 +53,9 @@ import { Content } from "../../blogs/year-report-2024.md";
   }
 
   @media screen and (max-width: 950px) {
+    .blog-wrapper {
+      padding-bottom: 0;
+    }
     .content-wrapper {
       grid-template-columns: 1fr;
     }

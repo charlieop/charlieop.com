@@ -62,10 +62,7 @@ const { title = "Charlie's Blog" } = Astro.props;
       margin-bottom: 0.5em;
     }
     img {
-      margin-block: 0.5rem;
-      width: auto;
-      max-width: 100%;
-      max-height: 500px;
+      margin: 0.5rem 1rem;
     }
 
     blockquote {
@@ -115,13 +112,31 @@ const { title = "Charlie's Blog" } = Astro.props;
       overflow-x: auto;
       font-family: monospace;
     }
+
+    #table-of-contents + ol {
+      border: 1px solid var(--clr-text--muted);
+      border-radius: 0.75rem;
+      padding: 1rem 2rem;
+      width: fit-content;
+
+      li {
+        margin-left: 0;
+      }
+
+      li li {
+        margin-left: 1.5rem;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
   }
 
   @media screen and (max-width: 800px) {
     .blog {
       --_index-width: 1rem;
     }
-    
   }
 </style>
 

@@ -6,7 +6,7 @@ import Logo from "./SVG/Logo.astro";
   <div class="nav-wrapper">
     <div class="logo-wrapper">
       <a href="/">
-        <Logo />
+        <Logo color="var(--clr-background)"/>
       </a>
     </div>
     <nav>
@@ -21,15 +21,13 @@ import Logo from "./SVG/Logo.astro";
 
 <style>
   header {
-    /* position: sticky; */
     padding: 0.5rem var(--header-padding-inline);
-    background-color: var(--clr-background);
+    background-color: var(--clr-primary);
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     user-select: none;
-    /* box-shadow: 0 -2px 5px black; */
     transition:
       transform 0.5s ease-in-out 0.1s,
       box-shadow 0.5s ease-in-out 0.1s;
@@ -62,31 +60,13 @@ import Logo from "./SVG/Logo.astro";
     cursor: pointer;
     border-radius: 0.375rem;
     font-size: var(--fs-400);
-    transition:
-      transform 0.3s ease-in-out,
-      background-color 0.2s linear;
+    color: var(--clr-background);
   }
   .nav-item:hover {
-    background-color: var(--clr-primary);
-    transform: translate(2px, -5px);
-  }
-  .nav-item span {
-    font-weight: 900;
-    font-size: 0.85em;
-    color: var(--clr-text--muted);::after
-    margin-right: 0.25ch;
+    text-decoration: underline;
   }
   .nav-item:hover {
     transform: translate(1px, -2px);
-  }
-  .nav-item.current::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 10%;
-    width: 80%;
-    height: 3px;
-    background-color: var(--clr-text);
   }
 
   .logo-wrapper,

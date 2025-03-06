@@ -33,7 +33,7 @@ const { title = "Charlie's Blog" } = Astro.props;
     h5,
     h6 {
       font-weight: 700;
-      margin-block: 0.75em 0.5em;
+      margin-block: 1em 0.25em;
     }
     h1 {
       font-size: var(--fs-800);
@@ -52,8 +52,9 @@ const { title = "Charlie's Blog" } = Astro.props;
       font-size: var(--fs-400);
     }
     p {
-      margin-block: 0.25em;
+      margin-block: 0.5em;
       font-size: var(--fs-300);
+      max-width: 75ch;
     }
     :not(p) + p {
       margin-top: 0.75em;
@@ -61,8 +62,9 @@ const { title = "Charlie's Blog" } = Astro.props;
     p:not(:last-child):not(:has(+ p)) {
       margin-bottom: 0.5em;
     }
-    img {
-      margin: 0.5rem 1rem;
+
+    p:has(> img) {
+      padding: 0.5rem 1rem;
     }
 
     blockquote {

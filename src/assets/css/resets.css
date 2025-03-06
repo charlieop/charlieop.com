@@ -73,6 +73,6 @@ p {
     scroll-behavior: smooth;
   }
 }
-:has(:target) {
+:target {
   scroll-margin-top: 3rem;
 }
